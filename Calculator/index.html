@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="h-[620px] w-[400px] bg-[#162956b4] m-auto p-6 border rounded-2xl font-bold text-[#020b20c0]"
+    >
+      <h1
+        class="text-5xl font-bold text-green-200 flex justify-center items-center"
+      >
+        Calculator
+      </h1>
+
+      <input
+        class="font-semibold text-end text-4xl border rounded-xl h-16 w-80 m-3 px-4"
+        id="input"
+        type="text"
+        placeholder="0"
+        readonly
+      />
+      <div class="grid grid-cols-4">
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('AC')"
+        >
+          Ac
+        </button>
+
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('%')"
+        >
+          %
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 py-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('del')"
+        >
+          Del
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('/')"
+        >
+          /
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('7')"
+        >
+          7
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('8')"
+        >
+          8
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('9')"
+        >
+          9
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('*')"
+        >
+          *
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('4')"
+        >
+          4
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('5')"
+        >
+          5
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('6')"
+        >
+          6
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('-')"
+        >
+          -
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('1')"
+        >
+          1
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('2')"
+        >
+          2
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('3')"
+        >
+          3
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('+')"
+        >
+          +
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('00')"
+        >
+          00
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('0')"
+        >
+          0
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('.')"
+        >
+          .
+        </button>
+        <button
+          class="bg-blue-300 backdrop-blur-2 p-4 text-4xl border rounded-full m-2"
+          onclick="inputtext('=')"
+        >
+          =
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function inputtext(value) {
+        const inputField = document.getElementById("input");
+        if (value == "=") {
+          inputField.value = eval(inputField.value);
+        } else if (value == "del" || value == "AC") {
+          inputField.value = "";
+        } else {
+          inputField.value += value;
+        }
+      }
+    </script>
+  </body>
+</html>
